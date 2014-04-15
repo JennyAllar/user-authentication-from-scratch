@@ -1,3 +1,60 @@
 body {
-    background-color: orange;
+    background-color: lightsalmon;
+}
+
+.welcome {
+    margin-left: 25px;
+}
+
+.welcome h1 {
+    font-size: 50px;
+    float: left;
+}
+
+.welcome p {
+    font-size: 60px;
+}
+
+.welcome a {
+    clear: both;
+    float: left;
+}
+
+.register {
+    width: 600px;
+    margin: 25px;
+}
+
+.register .field {
+    clear: left;
+    margin-bottom: 30px;
+    display: block;
+    overflow: hidden;
+}
+
+.register h2 {
+    font-size: 50px;
+    margin-left: 21%
+}
+
+.register .label {
+    width: 20%;
+    float: left;
+}
+
+.register input {
+    width: 75%;
+    float: right;
+    margin-top: 5px;
+    padding: 10px;
+    border-style: solid;
+    border-color: mediumslateblue;
+}
+
+.register .register_submit {
+    clear: both;
+    width: 150px;
+    margin-left: 21%;
+    float: left;
+    background-color: lightgrey;
 }

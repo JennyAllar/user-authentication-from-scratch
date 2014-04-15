@@ -1,5 +1,17 @@
-<form action="/register" method="post">
-  <input type="email" name="email">
-  <input type="password" name="password">
-  <input type="submit" value="register">
-</form>
+<div class="register">
+
+  <h2>Register</h2>
+
+  <form action="/register" method="post">
+    <div class="field">
+      <p class="label">Email</p>
+      <input type="email" name="email" autofocus="autofocus" placeholder="Enter your email address" label="email">
+    </div>
+    <div class="field">
+      <p class="label">Password</p>
+      <input type="password" name="password" placeholder="Choose a password" label="password">
+    </div>
+    <input type="submit" value="Register" class="register_submit">
+  </form>
+
+</div>

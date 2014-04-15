@@ -1,9 +1,9 @@
-<p>
-</p>
-
-
-<p>
-  Welcome, joe@example.com
-  <a href= "register">Register</a>
-
-</p>
+<div class="welcome">
+  <% if session[:email].nil? %>
+    <h1> You are not logged in </h1>
+    <a href="/register">Register</a>
+  <% else %>
+    <h1>Welcome, <%= session[:email] %></h1>
+    <a href="/logout">Logout</a>
+  <% end %>
+</div>
