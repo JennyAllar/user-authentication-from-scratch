@@ -10,7 +10,6 @@ class Application < Sinatra::Application
   enable :sessions
 
   get '/' do
-    #session[:email] ||= nil
     erb :index, locals: {email: session[:email]}
   end
 
@@ -27,9 +26,26 @@ class Application < Sinatra::Application
     redirect '/'
   end
 
+  get '/login' do
+    erb :login
+  end
+
+  post '/login' do
+    email = params[:email]
+    password = params[:password]
+    my_user = DB[:users].where(email: email).to_a.first
+    my_email = my_user[:email]
+    my_password = my_user[:password_digest]
+    if (email == my_email) && (password == my_password)
+      session[:email] = email
+      redirect '/'
+    else
+      redirect '/'
+    end
+  end
+
   get '/logout' do
     session.clear
     redirect '/'
   end
-
 end
