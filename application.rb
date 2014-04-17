@@ -1,4 +1,5 @@
 require 'sinatra/base'
+require 'bcrypt'
 require_relative './user_repository'
 
 class Application < Sinatra::Application
@@ -20,8 +21,11 @@ class Application < Sinatra::Application
   post '/register' do
     email = params[:email]
     password = params[:password]
+
+    password_hash = BCrypt::Password.create(password)
+
     user_table = DB[:users]
-    user_table.insert(email: email, password_digest: password)
+    user_table.insert(email: email, password_digest: password_hash)
     session[:email] = email
     redirect '/'
   end
@@ -33,10 +37,13 @@ class Application < Sinatra::Application
   post '/login' do
     email = params[:email]
     password = params[:password]
+
     my_user = DB[:users].where(email: email).to_a.first
     my_email = my_user[:email]
     my_password = my_user[:password_digest]
-    if (email == my_email) && (password == my_password)
+
+    password_hash = BCrypt::Password.new(my_password)
+    if (email == my_email) && (password_hash == password)
       session[:email] = email
       redirect '/'
     else

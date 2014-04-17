@@ -22,5 +22,7 @@ feature 'Homepage' do
     fill_in "password", with: "password"
     click_on "Log In"
     expect(page).to have_content "Welcome, joe@example.com"
+    click_on "Log Out"
+
   end
 end
