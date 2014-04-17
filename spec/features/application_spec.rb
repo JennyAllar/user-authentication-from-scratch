@@ -30,5 +30,10 @@ feature 'Homepage' do
     click_on "Log In"
     expect(page).to have_content "Invalid email or password"
 
+    fill_in "email", with: "new@example.com"
+    fill_in "password", with: "password"
+    click_on "Log In"
+    expect(page).to have_content "Invalid email or password"
+
   end
 end

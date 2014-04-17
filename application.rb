@@ -15,7 +15,7 @@ class Application < Sinatra::Application
   end
 
   get '/register' do
-    erb :register
+    erb :register, locals: {error: nil}
   end
 
   post '/register' do
@@ -35,19 +35,24 @@ class Application < Sinatra::Application
   end
 
   post '/login' do
+
     email = params[:email]
     password = params[:password]
-
     my_user = DB[:users].where(email: email).to_a.first
-    my_email = my_user[:email]
-    my_password = my_user[:password_digest]
 
-    password_hash = BCrypt::Password.new(my_password)
-    if (email == my_email) && (password_hash == password)
-      session[:email] = email
-      redirect '/'
-    else
+    if my_user.nil?
       erb :login, locals: {error: "Invalid email or password"}
+    else
+      my_email = my_user[:email]
+      my_password = my_user[:password_digest]
+      password_hash = BCrypt::Password.new(my_password)
+
+      if (email == my_email) && (password_hash == password)
+        session[:email] = email
+        redirect '/'
+      else
+        erb :login, locals: {error: "Invalid email or password"}
+      end
     end
   end
 
