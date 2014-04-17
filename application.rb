@@ -31,7 +31,7 @@ class Application < Sinatra::Application
   end
 
   get '/login' do
-    erb :login
+    erb :login, locals: {error: nil}
   end
 
   post '/login' do
@@ -47,7 +47,7 @@ class Application < Sinatra::Application
       session[:email] = email
       redirect '/'
     else
-      redirect '/'
+      erb :login, locals: {error: "Invalid email or password"}
     end
   end
 

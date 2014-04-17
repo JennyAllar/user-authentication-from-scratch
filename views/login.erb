@@ -1,7 +1,9 @@
 <div class="register">
 
 <h2>Log In</h2>
-
+  <% if error %>
+    <span style="color: red;"><%= error %></span>
+  <% end %>
   <form action="/login" method="post">
     <div class="field">
       <p class="label">Email</p>
