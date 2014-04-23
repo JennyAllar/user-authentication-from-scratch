@@ -1,9 +1,156 @@
-<div class="welcome">
-  <% if session[:email].nil? %>
-    <h1> You are not logged in </h1>
-    <a href="/login">Log In</a><a href="/register">Register</a>
-  <% else %>
-    <h1>Welcome, <%= email %></h1>
-    <a href="/logout">Log Out</a>
-  <% end %>
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+
+  <title>PAGE TITLE HERE</title>
+
+  <link href="style.css" rel="stylesheet" type="text/css"/>
+
+  <link rel="stylesheet" type="text/css" href="http://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.1/normalize.min.css">
+
+</head>
+
+<body>
+
+<header>
+  <div id="header_container">
+    <div id="header_logo">
+      <img src="images/common/jennylogo.png" width="400" height="120" alt="Logo"/>
+    </div>
+    <!--end header_logo-->
+  </div>
+  <!--end header-->
+</header>
+<div class="line-separator"></div>
 </div>
+
+<nav>
+  <div id="nav_container">
+
+    <ul id="menu">
+      <li><a href="/">Home</a></li>
+      <li><a href="/login">Log In</a></li>
+      <li><a href="/register">Register</a></li>
+      <li><a href="#">Relatives</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </div>
+  <!--end navigation-->
+</nav>
+
+<div id="content">
+  <div id="content_container">
+
+
+    <% if session[:email].nil? %>
+      <div class="one_half">
+        <div class="message">
+          You are not logged in.
+        </div>
+      </div>
+      <div class="one_half">
+        <div class="message">
+          <img src="images/common/oops.png" width="200" height="200" alt="Oops!"/>
+        </div>
+      </div>
+      <div class="full_column">
+        <div id="text">
+          <p>Lorizzle ipsizzle dolizzle sit doggy, dizzle adipiscing sure. Nullizzle sapizzle velit, cool boom shackalack,
+          suscipizzle quis, gravida vizzle, arcu. Fo fo shizzle mah nizzle fo rizzle, mah home g-dizzle tortor. Sed
+          erizzle. Black shizzlin dizzle dolizzle ghetto go to hizzle tempor. Maurizzle phat nibh izzle turpizzle.
+          Vestibulum izzle tortor. Pellentesque shit rhoncizzle gangster. In ass habitasse we gonna chung dictumst.
+          Crazy
+          dapibizzle. Fo shizzle break it down fo shizzle mah nizzle fo rizzle, mah home g-dizzle, dawg bizzle, dizzle
+          daahng dawg, eleifend vitae, nunc. For sure suscipit. Integizzle sempizzle ghetto sed purus.<br>
+
+          Etizzle laorizzle urna izzle nisl. Sed quizzle we gonna chung. Maecenizzle pulvinar, ipsum fo shizzle
+          malesuada
+          scelerisque, away doggy euismizzle crunk, cool luctus funky fresh nulla izzle augue. Vivamizzle ullamcorper,
+          phat et varizzle daahng dawg, nibh nunc ultricizzle crackalackin, izzle tellivizzle leo shizzlin dizzle black
+          dolor. Uhuh ... yih! dope, orci gizzle volutpizzle consectetuer, sizzle check out this luctus nisi, izzle
+          bibendizzle dang fizzle izzle shiznit. Sheezy go to hizzle boom shackalack ac orci eleifend viverra. Shizznit
+          nec ma nizzle. Yo nizzle velizzle vizzle pede sodales facilisizzle. Gangsta nulla, iaculizzle vel, molestie
+          sizzle, egestizzle my shizz, erizzle. vitae check it out crazy check it out bibendum things. Nizzle
+          pulvinizzle
+          consectetuer crazy. Aliquam gizzle volutpizzle. The bizzle ut leo izzle that's the shizzle pretium
+          faucibizzle.
+          Crizzle bow wow wow lacus dope own yo' fo stuff. Boofron nisl. Owned izzle urna. Boom shackalack sizzle
+          yippiyo
+          in mi. Donec izzle turpis.<br>
+
+          Sizzle shiznit tortizzle in fo shizzle mah nizzle fo rizzle, mah home g-dizzle ultricizzle consequizzle. In
+          convallis, owned ac dignissizzle posuere, gangsta lorizzle we gonna chung fo shizzle mah nizzle fo rizzle, mah
+          home g-dizzle, i saw beyonces tizzles and my pizzle went crizzle blandizzle dolizzle sizzle velizzle.
+          Pellentesque izzle break yo neck, yall nizzle elit varizzle tincidunt. Curabitizzle turpizzle nisi, crunk
+          black,
+          porta eleifend, own yo' in, metus. Nunc sed neque. Crazy ipsum cool sizzle amet, consectetizzle nizzle
+          elizzle.
+          Maecenas yo elizzle. In its fo rizzle. I saw beyonces tizzles and my pizzle went crizzle crazy erizzle yippiyo
+          velizzle aliquet dictizzle. Pizzle bling bling fo shizzle sit amet nibh. Crizzle commodo. Nunc eu sheezy et
+          neque ghetto. Black dawg massa urna pharetra lobortizzle. Shizzle my nizzle crocodizzle enim est, bibendum
+          pulvinar, ornare da bomb, imperdizzle vitae, break yo neck, yall. Vivamus eget shiz shit bow wow wow
+          adipiscing
+          dang. Curabitizzle et my shizz hizzle tellus sizzle nonummy.<br>
+
+          That's the shizzle tellus lorem, mah nizzle gangster, condimentizzle eget, vehicula id, diam. Ghetto sed check
+          it out a sem shiznit mattis. Pellentesque interdum magna in erizzle uhuh ... yih! ullamcorpizzle. Shut the
+          shizzle up lobortizzle shiznit ligula. Fo shizzle odio. Maecenas quizzle metus ac dolor iaculis sizzle.
+          Integizzle sagittis viverra fo shizzle mah nizzle fo rizzle, mah home g-dizzle. Curabitizzle fo shizzle massa
+          i'm in the shizzle its fo rizzle. Izzle venenatis shiznit dope amet tellus. Nam lobortizzle enim vitae arcu.
+          Cum
+          socizzle natoque crackalackin phat gangsta dizzle shiznit its fo rizzle, nascetizzle ridiculizzle gangsta.<br>
+
+          Prizzle crunk. I'm in the shizzle sit amizzle you son of a bizzle et massa rizzle pellentesque. Crackalackin
+          shizzle my nizzle crocodizzle erat. Vivamizzle boofron sapien, check out this sit amet, vulputate boom
+          shackalack, condimentizzle boom shackalack, nunc. Own yo' sizzle mah nizzle maurizzle. Nullizzle black mattis
+          nunc. Fo shizzle vulputate, elizzle bizzle ultrices facilisis, fizzle tellus cursizzle justo, shit condimentum
+          lacus ghetto gangsta enizzle. Yo fermentizzle shizzlin dizzle dang. Rizzle dignissizzle. In hizzle da bomb
+          platea my shizz. Nizzle fo shizzle mah nizzle fo rizzle, mah home g-dizzle amizzle fo shizzle. Donec its fo
+          rizzle diam. Ghetto izzle fo shizzle. Nizzle lobortis, elizzle i'm in the shizzle adipiscing suscipit, fizzle
+          nulla pretizzle lorizzle, quizzle break yo neck, yall shiz crazy izzle risizzle.<br>
+
+          Nulla eu ligula. Shizzle my nizzle crocodizzle sizzle doggy tellizzle. Sure viverra, sapizzle fizzle we gonna
+          chung hendrerizzle, break yo neck, yall urna hendrerit fo shizzle, fo that's the shizzle nunc sapizzle for
+          sure
+          nunc. Fo shizzle mah nizzle fo rizzle, mah home g-dizzle eu pot. Vestibulum ass felis. You son of a bizzle
+          elementizzle faucibus owned. Integer nulla yo, volutpizzle break it down, volutpizzle egizzle, boofron black,
+          nunc. Sure pharetra. Ma nizzle stuff. Curabitur daahng dawg check it out leo nec own yo' i saw beyonces
+          tizzles
+          and my pizzle went crizzle dignissizzle. Own yo' laorizzle the bizzle black amet sure. Hizzle tempizzle fo
+          shizzle felizzle.</p>
+        </div>
+      </div>
+    <% else %>
+      <h1>Welcome, <%= email %></h1>
+      <a href="/logout">Log Out</a>
+    <% end %>
+  </div>
+
+  <div class="resetColumnSet"></div>
+
+</div>
+<!--end content_container-->
+</div><!--end content-->
+
+<footer>
+  <div id="footer_container">
+
+    <!--  2/3 x 1/3 -->
+    <div class="one_third">
+      contact us
+    </div>
+    <div class="one_third">
+      careers
+    </div>
+    <div class="one_third">
+      twitter
+    </div>
+    <div class="resetColumnSet"></div>
+
+  </div>
+  <!--end footer_container-->
+</footer>
+
+</body>
+</html>
